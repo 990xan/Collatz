@@ -1,5 +1,5 @@
-import time
 import os
+
 
 def TestForExit(text):
     imp = (input(text))
@@ -15,22 +15,22 @@ mode = 0
 while mode == 0:
     os.system('cls')
     dat = input("Select a mode [Single, Up To, Infinite]: ")
-    if (dat.upper() == "SINGLE"):
+    if dat.upper() == "SINGLE":
         mode = 1
-    elif (dat.upper() == "UP TO"):
+    elif dat.upper() == "UP TO":
         mode = 2
-    elif (dat.upper() == "INFINITE"):
+    elif dat.upper() == "INFINITE":
         mode = 3
     else:
         print("Invalid mode! Please try again.")
         continue
 
-_workingnum = 1 #stores current number
-_counter = 1 #stores number of steps
-_megacounter = 1 #stores number of numbers iterated through for upto and infinite modes
-cntrecord = 0 # highest number of steps reached
-numrecord = 1 # number with the cntrec
-countval = 0 # number needed to be counted to for up to
+_workingnum = 1  # stores current number
+_counter = 1  # stores number of steps
+_megacounter = 1  # stores number of numbers iterated through for upto and infinite modes
+cntrecord = 0  # highest number of steps reached
+numrecord = 1  # number with the cntrec
+countval = 0  # number needed to be counted to for up to
 
 while mode == 1:
     _workingnum = TestForExit("Please enter a positive integer [or 'exit' to exit]: ")
@@ -75,7 +75,7 @@ while mode == 2:
         _megacounter += 1
         _workingnum = _megacounter
 
-# infinite mode, no while needed
+# infinite mode, no if needed since it's the last mode
 while True:
 
     print("------------------")
@@ -98,4 +98,3 @@ while True:
     _counter = 0
     _megacounter += 1
     _workingnum = _megacounter
-
